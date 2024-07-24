@@ -1,5 +1,9 @@
 # ASP.NET Core Web App - Authentication and Authorization
 
+
+https://github.com/user-attachments/assets/e4267bad-8fdd-42bf-8eb7-1c4204d55994
+
+
 This project is an ASP.NET Core Web Application that demonstrates how to implement user registration, authentication, authorization, and role-based authorization using Identity, Entity Framework, SQL Server, and Razor Pages.
 
 ## Features
