@@ -1,0 +1,51 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="row">
+    <div class="col-md-4 mx-auto rounded border p-3">
+        <section>
+            <h2 class="text-center mb-3">Please log In</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <form id="account" method="post">
+                
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input asp-for="Input.Password" class="form-control"/>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="checkbox mb-3">
+                    <label asp-for="Input.RememberMe" class="form-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+                <div class="row mb-3">
+                    <div class="col d-grid">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                    <div class="col d-grid">
+                        <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+                    </div>
+                </div>
+                <div>
+
+                    <a class="btn btn-link" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    
+                </div>
+            </form>
+        </section>
+    </div>
+    
+</div>
+
